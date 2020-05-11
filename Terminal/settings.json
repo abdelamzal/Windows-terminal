@@ -40,7 +40,7 @@
                 "icon": "%PROGRAMFILES%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "startingDirectory" : "E:\\Git\\",
                 "colorScheme": "Blue Matrix",
-                "backgroundImage": "E:\\Git\\MY\\Windows-terminal\\terminal_windows.jpg",
+                "backgroundImage": "E:\\Git\\MY\\Windows-terminal\\Fond\\terminal_windows.jpg",
                 "backgroundImageOpacity": 0.7,
                 "fontSize": 12,
                 "fontFace": "Cascadia Mono",
