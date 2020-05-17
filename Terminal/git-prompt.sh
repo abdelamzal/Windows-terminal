@@ -1,9 +1,7 @@
 
 function droite_term() {
-	NBDATE=25
-	#TAILLEPROMPT=$(printf %s $PS1)
-	#moncpt=${#TAILLEPROMPT}
-	NB=$(( $(tput cols) - ${NBDATE} ))
+	printf $1
+	NB=$(( $(tput cols) - $1 ))
 	ESP=$(printf " %.s" $(seq $NB))
 	PS1="$PS1"''"$ESP" 
 }
@@ -20,6 +18,7 @@ if test -f ~/.config/git/git-prompt.sh
 then
 	. ~/.config/git/git-prompt.sh
 else
+	NBDATE=27
 	PS1='\[\033]0;Git-Bash:$PWD\007\]' # set window title
 	PS1="$PS1"'\[\033[32m\]'       	# change to green
 	PS1="$PS1"'\u$'             	# user@
@@ -37,10 +36,13 @@ else
 			. "$COMPLETION_PATH/git-prompt.sh"
 			PS1="$PS1"'\[\033[36m\]'  # change color to cyan
 			PS1="$PS1"'`__git_ps1`'   # bash function
+			if test -f "$COMPLETION_PATH/git-completion.bash"
+			then 
+				NBDATE=34
+			fi
 		fi
 	fi
-	droite_term
-	PS1="$PS1"'\[\033[35m\]' 		# change color 
+	droite_term $NBDATE
 	PS1="$PS1"'['
 	PS1="$PS1"'\D{%d.%m.%Y}'			# display date
 	PS1="$PS1"']'
