@@ -1,12 +1,3 @@
-
-function droite_term() {
-	printf $1
-	NB=$(( $(tput cols) - $1 ))
-	ESP=$(printf " %.s" $(seq $NB))
-	PS1="$PS1"''"$ESP" 
-}
-
-
 if test -f /etc/profile.d/git-sdk.sh
 then
 	TITLEPREFIX=SDK-${MSYSTEM#MINGW}
@@ -21,9 +12,7 @@ else
 	NBDATE=27
 	PS1='\[\033]0;Git-Bash:$PWD\007\]' # set window title
 	PS1="$PS1"'\[\033[32m\]'       	# change to green
-	PS1="$PS1"'\u$'             	# user@
-	#PS1="$PS1"'\[\033[33m\]'       	# change to brownish yellow
-	#PS1="$PS1"'\w'                 # current working directory
+	PS1="$PS1"'\u$'             	# user$
 	if test -z "$WINELOADERNOEXEC"
 	then
 		GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
@@ -36,13 +25,8 @@ else
 			. "$COMPLETION_PATH/git-prompt.sh"
 			PS1="$PS1"'\[\033[36m\]'  # change color to cyan
 			PS1="$PS1"'`__git_ps1`'   # bash function
-			if test -f "$COMPLETION_PATH/git-completion.bash"
-			then 
-				NBDATE=34
-			fi
 		fi
 	fi
-	droite_term $NBDATE
 	PS1="$PS1"'['
 	PS1="$PS1"'\D{%d.%m.%Y}'			# display date
 	PS1="$PS1"']'
