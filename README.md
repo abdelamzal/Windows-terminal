@@ -7,6 +7,9 @@
 My settings for Windows terminal and ssh key connection 
 date : 05/2020
 
+![alt text][Terminal]
+
+[Terminal]: Fond/Result-terminal.png "Terminal-Windows"
 
 ## Editer le fichier git-prompt.sh
 > Pour commencer il faut se rendre dans le dossier d’installation de l’outil git: C:\Program Files\Git\etc\profile.d\
