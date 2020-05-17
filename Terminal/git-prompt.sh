@@ -1,3 +1,5 @@
+#C:\Program Files\Git\etc\profile.d
+
 if test -f /etc/profile.d/git-sdk.sh
 then
 	TITLEPREFIX=SDK-${MSYSTEM#MINGW}
@@ -9,14 +11,16 @@ if test -f ~/.config/git/git-prompt.sh
 then
 	. ~/.config/git/git-prompt.sh
 else
-	PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
-	PS1="$PS1"'\n'                 	# new line
+	PS1='\[\033]0;Git-Bash:$PWD\007\]' # set window title
 	PS1="$PS1"'\[\033[32m\]'       	# change to green
 	PS1="$PS1"'\u@'             	# user@
 	PS1="$PS1"'\[\033[33m\]'       	# change to brownish yellow
 	PS1="$PS1"'\w '                 # current working directory
 	PS1="$PS1"'\[\033[35m\]' 		# change color
-	PS1="$PS1"'\D{%F %T} '			# display date
+	#PS1="$PS1" $(printf "%*s% "  "$(tput cols)")
+	PS1="$PS1"'['
+	PS1="$PS1"'\D{%F %T}'			# display date
+	PS1="$PS1"']'
 	if test -z "$WINELOADERNOEXEC"
 	then
 		GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
@@ -31,6 +35,7 @@ else
 			PS1="$PS1"'`__git_ps1`'   # bash function
 		fi
 	fi
+	PS1="$PS1"'\n' 					# new line
 	PS1="$PS1"'\[\033[0m\]'        	# change color
 	PS1="$PS1"' > '                 # prompt: always >
 fi
