@@ -1,6 +1,10 @@
 # Windows-terminal
 
-My settings for Windows terminal 
+1. Installer Git-bash
+2. Installer SSH
+3. Installer Windows terminal
+
+My settings for Windows terminal and ssh key connection 
 date : 05/2020
 
 
