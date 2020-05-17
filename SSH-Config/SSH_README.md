@@ -6,13 +6,13 @@
 
 ## Easy connection
  create a file conf into folder .ssh like below :
-
+```config
  Host    name-host-connection
     ForwardAgent yes
     HostName    @IP
     User    UserLogin
     Port    SSH-Port
-
+```
 
 ## Connection command 
 
