@@ -22,17 +22,17 @@ Vous y trouverez le script git-prompt.sh, qui définit justement le format d’a
 
     PS1=”$PS1″‘\[\033[32m\]’ # change to green
 
-     Code      |       Color     
- ------------- | -------------
-      30       |        Black    
-      31       |        Red      
-      32       |        Green    
-      33       |        Yellow   
-      34       |        Blue     
-      35       |        Magenta  
-      36       |        Cyan     
-      37       |        White    
-      0        |        Black    
+Code     |    Color     
+:-------- | --------:
+30       |        Black    
+31       |        Red      
+32       |        Green    
+33       |        Yellow   
+34       |        Blue     
+35       |        Magenta  
+36       |        Cyan     
+37       |        White    
+0        |        Black    
 
 
 ## Variables
@@ -40,12 +40,12 @@ Vous y trouverez le script git-prompt.sh, qui définit justement le format d’a
 
     PS1=”$PS1″‘\w’ # current working directory
 
-    Variable   |       Contenu          
- ------------- | ---------------------- 
-      \n       |      saut de ligne       
-      \w       |      dossier courant     
-      \u       |      nom d’utilisateur   
-      \h       |      nom de la machine   
+Variable |   Contenu          
+:-------- | --------: 
+\n       |      saut de ligne       
+\w       |      dossier courant     
+\u       |      nom d’utilisateur   
+\h       |      nom de la machine   
 
 	
 	
