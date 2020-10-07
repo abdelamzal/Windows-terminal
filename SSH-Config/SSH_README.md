@@ -12,6 +12,8 @@
     HostName    @IP
     User    UserLogin
     Port    SSH-Port
+    IdentityFile C:\Users\nameuser\.ssh\id_rsa (Windows)
+    IdentityFile ~/.ssh/id_rsa (Linux)
 ```
 
 ## Connection command 
